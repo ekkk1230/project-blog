@@ -56,6 +56,11 @@ footer a {
 }
 footer a:focus, footer a:hover {color: #000;}
 
+.footer__theme-btn {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
 
 /* post navigation */
 .post__navigation {
@@ -153,6 +158,14 @@ footer a:focus, footer a:hover {color: #000;}
   color: gray;
 }
 
+.post__no-post {
+  padding: 24px;
+  text-align: center;
+  color: gray;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+}
+
 /* post datail */
 .post__detail .post__title {
   font-size: 36px;
@@ -172,6 +185,19 @@ footer a:focus, footer a:hover {color: #000;}
 
 .post__detail .post__text {
   padding: 20px 0;
+}
+
+.post__text--pre-wrap {
+  white-space: pre-wrap;
+}
+
+.post__category {
+  color: gray;
+  border: 1px solid lightgray;
+  padding: 0 4px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  font-size: 12px;
 }
 
 /* profile */
@@ -431,6 +457,14 @@ input:checked + .carousel__slide-container .nav label {
   color: red;
 }
 
+.form select {
+  border: 1px solid #f2f2f2;
+  max-width: 680px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 0.3rem;
+}
+
 /* loader */
 .loader {
   width: 48px;
@@ -446,3 +480,143 @@ input:checked + .carousel__slide-container .nav label {
   z-index: 9999;
   animation: rotation 1s linear infinite;
 }
+
+/* comments */
+.comments {
+  width: 100%;
+}
+
+.comments__form label {
+  font-weight: 600;
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.comments__form textarea {
+  min-height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+}
+
+.comments__form .form__block {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.comments__form .form__btn-submit {
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+  font-weight: 500;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__block-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.comments__form .form__btn-submit:hover, .comments__form .form__btn-submit:focus {
+  background: #1945a4;
+}
+
+.comment__list {
+  margin: 40px 0 100px;
+}
+
+.comment__box {
+  padding: 12px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.comment__profile-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.comment__email {
+  font-weight: 500;
+}
+
+.comment__date {
+  color: gray;
+}
+
+.comment__delete {
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.comment__delete:hover, .comment__delete:focus {
+  color: #000;
+}
+
+.comment__text {
+  font-size: 14px;
+  padding-top: 4px;
+}
+
+/* dark mode */
+
+.white {
+  transition: all 0.25s linear;
+  background: #fff;
+}
+
+.dark {
+  transition: all .25s linear;
+  background: #1e2937;
+  min-height: 100vh;
+}
+
+.dark a,
+.dark .form label,
+.dark .post__delete,
+.dark .profile__logout,
+.dark .form__title,
+.dark .post__navigation--active,
+.dark .post__title,
+.dark .post__author-name,
+.dark .footer__theme-btn,
+.dark .profile__name,
+.dark .comments__list {
+  color: white;
+}
+
+.dark a:hover,
+.dark a:focus,
+.dark .post__text,
+.dark .post__text--pre-wrap,
+.dark .profile__email,
+.dark .post__date,
+.dark .form__block,
+.dark .comment__date,
+.dark .comment__delete {
+  color: lightgray;
+}
+
+.dark .comment__delete:focus,
+.dark .comment__delete:hover{
+  color: #fff;
+}
+
+.dark .form__error{color: #ff6a71;}
+
+.dark footer,
+.dark header{background: #111827;}
+
